@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Potencialização</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Potenciação</h1>
+    <form action="/" method="post">
+        <div class="input-group mb-3">
+            <input id="numero" name="numero" type="number" class="form-control" placeholder="Informe um número" aria-label="Username" aria-describedby="sp_user">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button class="btn btn-primary" type="submit" >Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="row mt-5" th:if="${numero}">
+        <div class="col-sm-12">
+            <h1 class="text-center"><span th:text="${exibirnum}"></span>² = <span th:text="${numero}"></span></h1>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
